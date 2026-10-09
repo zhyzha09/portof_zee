@@ -1,0 +1,1571 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio — Programmer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              geist: ["Geist", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter">
+    <!-- Toast Container -->
+    <div
+      id="toast-container"
+      class="fixed top-6 right-6 z-[100] flex flex-col gap-3"
+    ></div>
+
+    <!-- ====== NAVBAR ====== -->
+    <nav class="sticky top-4 z-50 mx-auto max-w-[92%] lg:max-w-6xl mt-4">
+      <div
+        class="flex items-center justify-between rounded-full border border-white/10 bg-black/60 backdrop-blur-md px-6 py-3"
+      >
+        <a
+          href="#hero"
+          class="font-geist font-bold text-lg tracking-tight flex items-center gap-2"
+        >
+          <span
+            class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm font-bold"
+            >&lt;/&gt;</span
+          >
+          <span>dev<span class="text-emerald-400">.zhyzha</span></span>
+        </a>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-1">
+          <a
+            href="#about"
+            class="nav-link text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="nav-link text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-sm font-medium text-slate-300 hover:text-white px-4 py-2 rounded-full hover:bg-white/5 transition-colors"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="#contact"
+          class="hidden md:inline-flex items-center gap-2 text-sm font-medium bg-white text-neutral-950 px-5 py-2 rounded-full hover:bg-slate-200 transition-colors active:scale-95"
+        >
+          Hire Me
+          <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+        </a>
+        <!-- Mobile Toggle -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-slate-300 hover:text-white transition-colors"
+        >
+          <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden mt-2 rounded-2xl border border-white/10 bg-black/80 backdrop-blur-md p-4 flex flex-col gap-1"
+      >
+        <a
+          href="#about"
+          class="mobile-link text-sm font-medium text-slate-300 hover:text-white px-4 py-3 rounded-xl hover:bg-white/5 transition-colors"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="mobile-link text-sm font-medium text-slate-300 hover:text-white px-4 py-3 rounded-xl hover:bg-white/5 transition-colors"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="mobile-link text-sm font-medium text-slate-300 hover:text-white px-4 py-3 rounded-xl hover:bg-white/5 transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#experience"
+          class="mobile-link text-sm font-medium text-slate-300 hover:text-white px-4 py-3 rounded-xl hover:bg-white/5 transition-colors"
+          >Experience</a
+        >
+        <a
+          href="#contact"
+          class="mobile-link text-sm font-medium text-slate-300 hover:text-white px-4 py-3 rounded-xl hover:bg-white/5 transition-colors"
+          >Contact</a
+        >
+        <a
+          href="#contact"
+          class="text-sm font-medium bg-white text-neutral-950 px-5 py-3 rounded-xl text-center hover:bg-slate-200 transition-colors mt-2"
+          >Hire Me</a
+        >
+      </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section
+      id="hero"
+      class="relative max-w-[92%] lg:max-w-6xl mx-auto pt-24 pb-20 lg:pt-32 lg:pb-28"
+    >
+      <!-- Glow orb -->
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"
+      ></div>
+
+      <div class="relative grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left -->
+        <div class="flex flex-col gap-6">
+          <div
+            class="anim-in anim-delay-1 flex items-center gap-2 w-fit px-4 py-2 rounded-full border border-emerald-500/20 bg-emerald-500/5"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+            ></span>
+            <span class="text-xs font-medium text-emerald-400"
+              >Open to Internship</span
+            >
+          </div>
+          <h1
+            class="anim-in anim-delay-2 font-geist text-4xl lg:text-6xl font-light tracking-tight leading-[1.1]"
+          >
+            Hi, I'm<br />
+            <span class="font-semibold text-emerald-400">Azizah Ramadhani</span
+            ><span class="cursor">|</span>
+          </h1>
+          <p
+            class="anim-in anim-delay-3 text-lg text-slate-400 leading-relaxed max-w-lg"
+          >
+            A passionate
+            <span class="text-white font-medium">Full-Stack Developer</span>
+            dengan fokus merancang solusi digital modern dari struktur backend hingga tampilan pengguna.
+          </p>
+          <div class="anim-in anim-delay-4 flex flex-wrap gap-3 mt-2">
+            <a
+              href="#projects"
+              class="glow-btn inline-flex items-center gap-2 text-sm font-medium bg-white text-neutral-950 px-6 py-3 rounded-full hover:bg-slate-200 transition-colors active:scale-95"
+            >
+              View My Work
+              <iconify-icon icon="lucide:arrow-down" width="16"></iconify-icon>
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 text-sm font-medium border border-white/10 text-slate-300 px-6 py-3 rounded-full hover:bg-white/5 hover:border-white/20 transition-all active:scale-95"
+            >
+              <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+              Get in Touch
+            </a>
+          </div>
+          <!-- Quick stats -->
+          <div class="anim-in anim-delay-5 flex gap-8 mt-4">
+            <div>
+              <div class="text-2xl font-semibold tabular-nums text-white">
+                10+
+              </div>
+              <div
+                class="text-xs text-neutral-500 font-medium uppercase tracking-wider"
+              >
+                Projects
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-semibold tabular-nums text-white">
+                3
+              </div>
+              <div
+                class="text-xs text-neutral-500 font-medium uppercase tracking-wider"
+              >
+                Certifications
+              </div>
+            </div>
+            <div>
+              <div class="text-2xl font-semibold tabular-nums text-white">
+                2+
+              </div>
+              <div
+                class="text-xs text-neutral-500 font-medium uppercase tracking-wider"
+              >
+                Years Coding
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Terminal card -->
+        <div class="anim-in anim-delay-5 flex justify-center lg:justify-end">
+          <div
+            class="w-full max-w-md rounded-2xl border border-white/10 bg-[#0c0d10] overflow-hidden shadow-2xl"
+          >
+            <!-- Terminal header -->
+            <div
+              class="flex items-center gap-2 px-4 py-3 border-b border-white/5"
+            >
+              <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+              <span class="ml-2 text-xs text-neutral-500 font-mono"
+                >about-me.ts</span
+              >
+            </div>
+            <!-- Terminal body -->
+            <div class="p-5 font-mono text-sm leading-relaxed">
+              <div>
+                <span class="text-emerald-400">const</span>
+                <span class="text-sky-300">developer</span> = {
+              </div>
+              <div class="ml-4">
+                <span class="text-yellow-300">name</span>:
+                <span class="text-orange-300">"Azizah Ramadhani"</span>,
+              </div>
+              <div class="ml-4">
+                <span class="text-yellow-300">role</span>:
+                <span class="text-orange-300">"Full-Stack Developer"</span>,
+              </div>
+              <div class="ml-4">
+                <span class="text-yellow-300">education</span>:
+                <span class="text-orange-300">"Vocational high school"</span>,
+              </div>
+              <div class="ml-4">
+                <span class="text-yellow-300">stack</span>: [
+              </div>
+              <div class="ml-8">
+                <span class="text-orange-300">"React"</span>,
+                <span class="text-orange-300">"PHP"</span>,
+              </div>
+              <div class="ml-8">
+                <span class="text-orange-300">"Java Script"</span>,
+                <span class="text-orange-300">"MySQL / MariaDB"</span>
+              </div>
+              <div class="ml-4">],</div>
+              <div class="ml-4">
+                <span class="text-yellow-300">passion</span>:
+                <span class="text-orange-300">"Building things"</span>,
+              </div>
+              <div class="ml-4">
+                <span class="text-yellow-300">available</span>:
+                <span class="text-emerald-400">true</span>
+              </div>
+              <div>};</div>
+              <div class="mt-3 flex items-center">
+                <span class="text-emerald-400">→</span>
+                <span class="ml-1 text-neutral-500"
+                  >Ready for next adventure</span
+                >
+                <span class="cursor ml-1">▋</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="anim-in anim-delay-7 flex justify-center mt-16">
+        <a
+          href="#about"
+          class="flex flex-col items-center gap-2 text-neutral-500 hover:text-emerald-400 transition-colors"
+        >
+          <span class="text-[10px] font-medium uppercase tracking-widest"
+            >Scroll Down</span
+          >
+          <iconify-icon
+            icon="lucide:chevron-down"
+            width="20"
+            class="animate-bounce"
+          ></iconify-icon>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="max-w-[92%] lg:max-w-6xl mx-auto py-20">
+      <div class="animate-on-scroll grid lg:grid-cols-5 gap-10 items-start">
+        <!-- Image -->
+        <div class="lg:col-span-2 flex justify-center">
+          <div class="relative">
+            <div
+              class="absolute -inset-3 bg-gradient-to-br from-emerald-500/20 to-transparent rounded-3xl blur-xl"
+            ></div>
+            <img
+              src="img/IMG_5402.JPG"
+              alt="Profile"
+              class="relative w-72 h-80 object-cover rounded-2xl border border-white/10 grayscale hover:grayscale-0 transition-all duration-500"
+            />
+            <!-- Floating badge -->
+            <div
+              class="absolute -bottom-4 -right-4 bg-[#0c0d10] border border-white/10 rounded-xl px-4 py-3 flex items-center gap-2 shadow-xl"
+            >
+              <iconify-icon
+                icon="lucide:code-2"
+                width="18"
+                class="text-emerald-400"
+              ></iconify-icon>
+              <div>
+                <div class="text-xs font-semibold text-white">2+ Years</div>
+                <div class="text-[10px] text-neutral-500">
+                  Coding Experience
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="lg:col-span-3 flex flex-col gap-6">
+          <div class="flex items-center gap-3">
+            <span
+              class="text-xs font-bold uppercase tracking-widest text-emerald-400"
+              >01</span
+            >
+            <span class="h-px flex-1 bg-white/10"></span>
+            <span
+              class="text-xs font-medium uppercase tracking-widest text-neutral-500"
+              >About Me</span
+            >
+          </div>
+          <h2 class="font-geist text-3xl lg:text-4xl font-light tracking-tight">
+            Turning
+            <span class="text-emerald-400 font-medium">ideas</span>
+            into<br />real-world software
+          </h2>
+          <p class="text-slate-400 leading-relaxed">
+            Mengubah Gagasan Menjadi Solusi Digital Berdampak Nyata
+            Saya adalah pengembang Full-Stack berlatar belakang Rekayasa Perangkat Lunak (PPLG)
+            yang berfokus pada arsitektur backend dan keterlibatan pengguna. Perjalanan saya dimulai 
+            dari rasa penasaran mendalam terhadap cara kerja aplikasi, yang kini berkembang menjadi komitmen 
+            untuk membangun sistem yang stabil, efisien, dan ramah pengguna. Dari merancang alur database hingga 
+            membangun antarmuka yang presisi, saya selalu terdorong untuk menciptakan perangkat lunak yang menjawab masalah nyata.
+          </p>
+  
+          <!-- Info grid -->
+          <div class="grid grid-cols-2 gap-4 mt-2">
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-white/[0.02]"
+            >
+              <iconify-icon
+                icon="lucide:map-pin"
+                width="18"
+                class="text-emerald-400"
+              ></iconify-icon>
+              <div>
+                <div
+                  class="text-[10px] text-neutral-500 uppercase tracking-wider"
+                >
+                  Location
+                </div>
+                <div class="text-sm text-white">Ende</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-white/[0.02]"
+            >
+              <iconify-icon
+                icon="lucide:graduation-cap"
+                width="18"
+                class="text-emerald-400"
+              ></iconify-icon>
+              <div>
+                <div
+                  class="text-[10px] text-neutral-500 uppercase tracking-wider"
+                >
+                  Education
+                </div>
+                <div class="text-sm text-white">
+                  Pengembangan Perangkat Lunak Dan Gim
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-white/[0.02]"
+            >
+              <iconify-icon
+                icon="lucide:languages"
+                width="18"
+                class="text-emerald-400"
+              ></iconify-icon>
+              <div>
+                <div
+                  class="text-[10px] text-neutral-500 uppercase tracking-wider"
+                >
+                  Languages
+                </div>
+                <div class="text-sm text-white">Indonesia</div>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-3 p-3 rounded-xl border border-white/5 bg-white/[0.02]"
+            >
+              <iconify-icon
+                icon="lucide:briefcase"
+                width="18"
+                class="text-emerald-400"
+              ></iconify-icon>
+              <div>
+                <div
+                  class="text-[10px] text-neutral-500 uppercase tracking-wider"
+                >
+                  Status
+                </div>
+                <div class="text-sm text-emerald-400">Pelajar</div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="https://canva.link/i9sidhmzwtu0jp1"
+            class="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors mt-2 w-fit group"
+          >
+            Download Resume
+            <iconify-icon
+              icon="lucide:download"
+              width="16"
+              class="group-hover:translate-y-0.5 transition-transform"
+            ></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills" class="max-w-[92%] lg:max-w-6xl mx-auto py-20">
+      <div class="animate-on-scroll text-center mb-12">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="h-px w-12 bg-white/10"></span>
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-emerald-400"
+            >02</span
+          >
+          <span class="h-px w-12 bg-white/10"></span>
+        </div>
+        <h2 class="font-geist text-3xl lg:text-4xl font-light tracking-tight">
+          Tech <span class="text-emerald-400 font-medium">Stack</span>
+        </h2>
+        <p class="text-slate-400 mt-3 max-w-md mx-auto">
+          Technologies and tools I use to bring ideas to life
+        </p>
+      </div>
+
+      <!-- Skill categories tabs -->
+      <div class="animate-on-scroll flex flex-wrap justify-center gap-2 mb-10">
+        <button
+          class="tab-btn active text-xs font-medium px-4 py-2 rounded-full border border-white/10 text-slate-300 hover:bg-white/5 transition-all"
+          data-tab="frontend"
+        >
+          Frontend
+        </button>
+        <button
+          class="tab-btn text-xs font-medium px-4 py-2 rounded-full border border-white/10 text-slate-300 hover:bg-white/5 transition-all"
+          data-tab="backend"
+        >
+          Backend
+        </button>
+        <button
+          class="tab-btn text-xs font-medium px-4 py-2 rounded-full border border-white/10 text-slate-300 hover:bg-white/5 transition-all"
+          data-tab="tools"
+        >
+          Tools & Others
+        </button>
+      </div>
+
+      <!-- Skill panels -->
+      <div id="skill-frontend" class="skill-panel animate-on-scroll">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:react" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">React</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="85%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon
+              icon="logos:nextjs-icon"
+              width="36"
+              class="invert"
+            ></iconify-icon>
+            <span class="text-sm font-medium text-white">Next.js</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="75%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon
+              icon="logos:typescript-icon"
+              width="36"
+            ></iconify-icon>
+            <span class="text-sm font-medium text-white">TypeScript</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="80%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon
+              icon="logos:tailwindcss-icon"
+              width="36"
+            ></iconify-icon>
+            <span class="text-sm font-medium text-white">Tailwind CSS</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="90%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skill-backend" class="skill-panel hidden">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:nodejs-icon" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Node.js</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="80%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon
+              icon="logos:express"
+              width="36"
+              class="invert"
+            ></iconify-icon>
+            <span class="text-sm font-medium text-white">Express.js</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="75%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:python" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Python</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="78%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:postgresql" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">PostgreSQL</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:mongodb-icon" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">MongoDB</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="72%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:prisma" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Prisma</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="65%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skill-tools" class="skill-panel hidden">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:git-icon" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Git</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="85%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:docker-icon" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Docker</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="60%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:figma" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Figma</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="70%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 hover:bg-emerald-500/5 transition-all"
+          >
+            <iconify-icon icon="logos:linux-tux" width="36"></iconify-icon>
+            <span class="text-sm font-medium text-white">Linux</span>
+            <div class="w-full h-1.5 rounded-full bg-white/5 overflow-hidden">
+              <div
+                class="skill-fill h-full rounded-full bg-emerald-500"
+                data-width="68%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects" class="max-w-[92%] lg:max-w-6xl mx-auto py-20">
+      <div class="animate-on-scroll text-center mb-12">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="h-px w-12 bg-white/10"></span>
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-emerald-400"
+            >03</span
+          >
+          <span class="h-px w-12 bg-white/10"></span>
+        </div>
+        <h2 class="font-geist text-3xl lg:text-4xl font-light tracking-tight">
+          Featured <span class="text-emerald-400 font-medium">Projects</span>
+        </h2>
+        <p class="text-slate-400 mt-3 max-w-md mx-auto">
+          A selection of projects that showcase my skills and interests
+        </p>
+      </div>
+
+      <div class="animate-on-scroll grid md:grid-cols-2 gap-6">
+        <!-- Project 1 -->
+        <div
+          class="project-card rounded-2xl bg-[#0c0d10] overflow-hidden group"
+        >
+          <div class="relative overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/project-ecommerce/600/340.jpg"
+              alt="E-Commerce Platform"
+              class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-transparent"
+            ></div>
+            <div class="absolute top-3 right-3 flex gap-2">
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 px-2.5 py-1 rounded-full"
+                >Featured</span
+              >
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-geist text-xl font-semibold text-white mb-2">
+              ShopEase — E-Commerce Platform
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Full-stack e-commerce with product catalog, cart, checkout, and
+              admin dashboard. Built with Next.js 14 App Router and server
+              components.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Next.js</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >TypeScript</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Prisma</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >PostgreSQL</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Stripe</span
+              >
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <iconify-icon icon="lucide:github" width="14"></iconify-icon>
+                Source
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                <iconify-icon
+                  icon="lucide:external-link"
+                  width="14"
+                ></iconify-icon>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="project-card rounded-2xl bg-[#0c0d10] overflow-hidden group"
+        >
+          <div class="relative overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/project-taskapp/600/340.jpg"
+              alt="Task Management"
+              class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-transparent"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-geist text-xl font-semibold text-white mb-2">
+              TaskFlow — Project Management App
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Kanban-style task manager with real-time collaboration,
+              drag-and-drop boards, and team workspace. Inspired by Trello &
+              Notion.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >React</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Node.js</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Socket.io</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >MongoDB</span
+              >
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <iconify-icon icon="lucide:github" width="14"></iconify-icon>
+                Source
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                <iconify-icon
+                  icon="lucide:external-link"
+                  width="14"
+                ></iconify-icon>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="project-card rounded-2xl bg-[#0c0d10] overflow-hidden group"
+        >
+          <div class="relative overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/project-weather/600/340.jpg"
+              alt="Weather App"
+              class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-transparent"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-geist text-xl font-semibold text-white mb-2">
+              WeatherNow — Weather Dashboard
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Beautiful weather app with location search, 7-day forecast,
+              interactive maps, and air quality index. PWA-ready with offline
+              support.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >React</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >OpenWeather API</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Tailwind CSS</span
+              >
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <iconify-icon icon="lucide:github" width="14"></iconify-icon>
+                Source
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                <iconify-icon
+                  icon="lucide:external-link"
+                  width="14"
+                ></iconify-icon>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          class="project-card rounded-2xl bg-[#0c0d10] overflow-hidden group"
+        >
+          <div class="relative overflow-hidden">
+            <img
+              src="https://picsum.photos/seed/project-api/600/340.jpg"
+              alt="API"
+              class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0c0d10] via-transparent to-transparent"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-geist text-xl font-semibold text-white mb-2">
+              Bookshelf API — RESTful Service
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              RESTful API for managing book collections with CRUD operations,
+              authentication, rate limiting, and Swagger documentation.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Express.js</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >PostgreSQL</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >JWT</span
+              >
+              <span
+                class="text-[10px] font-medium px-2.5 py-1 rounded-full border border-white/10 text-slate-400"
+                >Docker</span
+              >
+            </div>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <iconify-icon icon="lucide:github" width="14"></iconify-icon>
+                Source
+              </a>
+              <a
+                href="#"
+                class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                <iconify-icon
+                  icon="lucide:external-link"
+                  width="14"
+                ></iconify-icon>
+                API Docs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll flex justify-center mt-10">
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 text-sm font-medium border border-white/10 text-slate-300 px-6 py-3 rounded-full hover:bg-white/5 hover:border-white/20 transition-all active:scale-95 group"
+        >
+          View All on GitHub
+          <iconify-icon
+            icon="lucide:arrow-right"
+            width="16"
+            class="group-hover:translate-x-1 transition-transform"
+          ></iconify-icon>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====== EXPERIENCE ====== -->
+    <section id="experience" class="max-w-[92%] lg:max-w-6xl mx-auto py-20">
+      <div class="animate-on-scroll text-center mb-12">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="h-px w-12 bg-white/10"></span>
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-emerald-400"
+            >04</span
+          >
+          <span class="h-px w-12 bg-white/10"></span>
+        </div>
+        <h2 class="font-geist text-3xl lg:text-4xl font-light tracking-tight">
+          Experience &
+          <span class="text-emerald-400 font-medium">Education</span>
+        </h2>
+      </div>
+
+      <div class="animate-on-scroll grid lg:grid-cols-2 gap-8">
+        <!-- Experience -->
+        <div>
+          <h3
+            class="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-6 flex items-center gap-2"
+          >
+            <iconify-icon
+              icon="lucide:briefcase"
+              width="14"
+              class="text-emerald-400"
+            ></iconify-icon>
+            Experience
+          </h3>
+          <div class="relative pl-8 border-l border-white/10 space-y-8">
+            <!-- Exp 1 -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[41px] top-1 w-3 h-3 rounded-full border-2 border-emerald-500 bg-[#0A0B0E] group-hover:bg-emerald-500 transition-colors"
+              ></div>
+              <div
+                class="p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 transition-all"
+              >
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h4 class="text-sm font-semibold text-white">
+                    Frontend Developer Intern
+                  </h4>
+                  <span
+                    class="text-[10px] font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full whitespace-nowrap"
+                    >2026</span
+                  >
+                </div>
+                <div class="text-xs text-slate-400 mb-3">
+                  Sistem Informasi Pembelajaran Digital (BBF) · Project Intern
+                </div>
+                <ul class="space-y-1.5">
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Menganalisis kebutuhan pengguna dan merancang fitur pembelajaran interaktif berbasis game edukatif.
+                  </li>
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Merancang modul parental control serta sistem pelaporan perkembangan siswa secara real-time.
+                  </li>
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Menyusun flowchart, use case, arsitektur database, dan mockup UI/UX berbasis web/mobile.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Exp 2 -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[41px] top-1 w-3 h-3 rounded-full border-2 border-white/20 bg-[#0A0B0E] group-hover:bg-emerald-500 transition-colors"
+              ></div>
+              <div
+                class="p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 transition-all"
+              >
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h4 class="text-sm font-semibold text-white">
+                    Web Developer Intern
+                  </h4>
+                  <span
+                    class="text-[10px] font-medium text-neutral-500 bg-white/5 px-2 py-0.5 rounded-full whitespace-nowrap"
+                    >2025</span
+                  >
+                </div>
+                <div class="text-xs text-slate-400 mb-3">
+                  Sistem Informasi Inventory Gudang · Project Intern
+                </div>
+                <ul class="space-y-1.5">
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Menganalisis alur pencatatan stok manual untuk merancang solusi digitalisasi kelola barang.
+                  </li>
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Menyusun flowchart, use case, struktur database, serta mockup UI/UX sistem gudang berbasis web.
+                  </li>
+                  <li class="text-xs text-slate-400 flex items-start gap-2">
+                    <iconify-icon
+                      icon="lucide:check"
+                      width="12"
+                      class="text-emerald-400 mt-0.5 shrink-0"
+                    ></iconify-icon>
+                    Merancang fitur pencatatan stok real-time, notifikasi batas minimum, dan rekap laporan otomatis.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h3
+            class="text-xs font-bold uppercase tracking-widest text-neutral-500 mb-6 flex items-center gap-2"
+          >
+            <iconify-icon
+              icon="lucide:graduation-cap"
+              width="14"
+              class="text-emerald-400"
+            ></iconify-icon>
+            Education 
+          </h3>
+          <div class="relative pl-8 border-l border-white/10 space-y-8">
+            <!-- Edu 1 -->
+            <div class="relative group">
+              <div
+                class="absolute -left-[41px] top-1 w-3 h-3 rounded-full border-2 border-emerald-500 bg-[#0A0B0E] group-hover:bg-emerald-500 transition-colors"
+              ></div>
+              <div
+                class="p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 transition-all"
+              >
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <h4 class="text-sm font-semibold text-white">
+                    SMK - PPLG
+                  </h4>
+                  <span
+                    class="text-[10px] font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full whitespace-nowrap"
+                    >2024 — Now</span
+                  >
+                </div>
+                <div class="text-xs text-slate-400 mb-2">
+                  Madrasah Aliyah Kejuruan Negeri Ende
+                </div>
+                <p class="text-xs text-slate-400">
+                  Relevant coursework: Pemrograman Web, Manajemen Basis Data, Desain UI/UX, Pemrograman Berorientasi Objek (OOP)
+                </p>
+              </div>
+            </div>
+            <!-- Certs -->
+            <div class="relative group">
+              <!-- <div
+                class="absolute -left-[41px] top-1 w-3 h-3 rounded-full border-2 border-white/20 bg-[#0A0B0E] group-hover:bg-emerald-500 transition-colors"
+              ></div> -->
+              <!-- <div
+                class="p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-emerald-500/20 transition-all space-y-4"
+              > -->
+                <!-- <h4 class="text-sm font-semibold text-white mb-3">
+                  Certifications
+                </h4>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <iconify-icon
+                      icon="lucide:award"
+                      width="16"
+                      class="text-yellow-400"
+                    ></iconify-icon>
+                  </div> -->
+                  <!-- <div>
+                    <div class="text-xs font-medium text-white">
+                      Meta Front-End Developer
+                    </div>
+                    <div class="text-[10px] text-neutral-500">
+                      Coursera · 2024
+                    </div>
+                  </div>
+                </div> -->
+                <!-- <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <iconify-icon
+                      icon="lucide:award"
+                      width="16"
+                      class="text-blue-400"
+                    ></iconify-icon>
+                  </div>
+                  <div>
+                    <div class="text-xs font-medium text-white">
+                      AWS Cloud Practitioner
+                    </div>
+                    <div class="text-[10px] text-neutral-500">
+                      Amazon · 2024
+                    </div>
+                  </div> -->
+                <!-- </div>
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0"
+                  >
+                    <iconify-icon
+                      icon="lucide:award"
+                      width="16"
+                      class="text-emerald-400"
+                    ></iconify-icon>
+                  </div>
+                  <div>
+                    <div class="text-xs font-medium text-white">
+                      Dicoding Backend Expert
+                    </div>
+                    <div class="text-[10px] text-neutral-500">
+                      Dicoding · 2023
+                    </div> -->
+                  <!-- </div>
+                </div>
+              </div>
+            </div> -->
+          <!-- </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="max-w-[92%] lg:max-w-6xl mx-auto py-20">
+      <div class="animate-on-scroll">
+        <div
+          class="relative rounded-3xl border border-white/10 bg-[#0c0d10] overflow-hidden"
+        >
+          <!-- Glow -->
+          <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"
+          ></div>
+
+          <div class="relative grid lg:grid-cols-2 gap-10 p-8 lg:p-12">
+            <!-- Left -->
+            <div class="flex flex-col gap-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="text-xs font-bold uppercase tracking-widest text-emerald-400"
+                  >05</span
+                >
+                <span class="h-px flex-1 bg-white/10"></span>
+                <span
+                  class="text-xs font-medium uppercase tracking-widest text-neutral-500"
+                  >Contact</span
+                >
+              </div>
+              <h2
+                class="font-geist text-3xl lg:text-4xl font-light tracking-tight"
+              >
+                Let's work<br /><span class="text-emerald-400 font-medium"
+                  >together</span
+                >
+              </h2>
+              <p class="text-slate-400 leading-relaxed">
+                Saat ini saya sedang mencari peluang magang. Kalau kamu punya pertanyaan atau cuma mau menyapa, inbox saya selalu terbuka!
+              </p>
+              <!-- Contact info -->
+              <div class="space-y-3 mt-2">
+                <a
+                  href="mailto:andi.pratama@email.com"
+                  class="flex items-center gap-3 text-sm text-slate-400 hover:text-emerald-400 transition-colors group"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all"
+                  >
+                    <iconify-icon icon="lucide:mail" width="18"></iconify-icon>
+                  </div>
+                  izahhajar96@email.com
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center gap-3 text-sm text-slate-400 hover:text-emerald-400 transition-colors group"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all"
+                  >
+                    <iconify-icon
+                      icon="lucide:instagram"
+                       width="18"
+                    ></iconify-icon>
+                  </div>
+                  Instagram.com/in/1209zee
+                </a>
+                <a
+                  href="#"
+                  class="flex items-center gap-3 text-sm text-slate-400 hover:text-emerald-400 transition-colors group"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center group-hover:border-emerald-500/30 group-hover:bg-emerald-500/5 transition-all"
+                  >
+                    <iconify-icon
+                      icon="lucide:github"
+                      width="18"
+                    ></iconify-icon>
+                  </div>
+                  github.com/zhyzha09
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Form -->
+            <form id="contact-form" class="flex flex-col gap-4">
+              <div>
+                <label
+                  class="text-[10px] font-medium uppercase tracking-wider text-neutral-500 mb-1.5 block"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  required
+                  class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 outline-none focus:border-emerald-500/40 focus:bg-white/[0.05] transition-all"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[10px] font-medium uppercase tracking-wider text-neutral-500 mb-1.5 block"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  required
+                  class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 outline-none focus:border-emerald-500/40 focus:bg-white/[0.05] transition-all"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[10px] font-medium uppercase tracking-wider text-neutral-500 mb-1.5 block"
+                  >Message</label
+                >
+                <textarea
+                  rows="4"
+                  placeholder="Tell me about your project or opportunity..."
+                  required
+                  class="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 outline-none focus:border-emerald-500/40 focus:bg-white/[0.05] transition-all resize-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="glow-btn inline-flex items-center justify-center gap-2 text-sm font-medium bg-white text-neutral-950 px-6 py-3 rounded-full hover:bg-slate-200 transition-colors active:scale-95 mt-2"
+              >
+                Send Message
+                <iconify-icon icon="lucide:send" width="16"></iconify-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="border-t border-white/5">
+      <div
+        class="max-w-[92%] lg:max-w-6xl mx-auto py-8 flex flex-col md:flex-row items-center justify-between gap-4"
+      >
+        <div class="flex items-center gap-2 text-sm text-neutral-500">
+          <span
+            class="w-6 h-6 rounded-md bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-[10px] font-bold"
+            >&lt;/&gt;</span
+          >
+          <span>© 2025 Azizah Ramadhani. Built with passion.</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            href="#"
+            class="text-neutral-500 hover:text-emerald-400 transition-colors"
+            ><iconify-icon icon="lucide:github" width="18"></iconify-icon
+          ></a>
+          <!-- <a
+            href="#"
+            class="text-neutral-500 hover:text-emerald-400 transition-colors"
+            ><iconify-icon icon="lucide:linkedin" width="18"></iconify-icon
+          ></a> -->
+          <a
+            href="#"
+            class="text-neutral-500 hover:text-emerald-400 transition-colors"
+            ><iconify-icon icon="lucide:instagram" width="18"></iconify-icon
+          ></a>
+          <a
+            href="mailto:andi.pratama@email.com"
+            class="text-neutral-500 hover:text-emerald-400 transition-colors"
+            ><iconify-icon icon="lucide:mail" width="18"></iconify-icon
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+      // === Mobile menu toggle ===
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      let menuOpen = false;
+      menuToggle.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle("open", menuOpen);
+        menuToggle.innerHTML = menuOpen
+          ? '<iconify-icon icon="lucide:x" width="24"></iconify-icon>'
+          : '<iconify-icon icon="lucide:menu" width="24"></iconify-icon>';
+      });
+      // Close on link click
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuOpen = false;
+          mobileMenu.classList.remove("open");
+          menuToggle.innerHTML =
+            '<iconify-icon icon="lucide:menu" width="24"></iconify-icon>';
+        });
+      });
+
+      // === Scroll animations ===
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px 0px -10% 0px",
+      };
+      const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            // Trigger skill bars
+            entry.target.querySelectorAll(".skill-fill").forEach((bar) => {
+              bar.style.width = bar.dataset.width;
+              bar.classList.add("filled");
+            });
+          }
+        });
+      }, observerOptions);
+      document
+        .querySelectorAll(".animate-on-scroll")
+        .forEach((el) => scrollObserver.observe(el));
+
+      // === Skill tabs ===
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const tab = btn.dataset.tab;
+          document
+            .querySelectorAll(".skill-panel")
+            .forEach((p) => p.classList.add("hidden"));
+          const target = document.getElementById("skill-" + tab);
+          target.classList.remove("hidden");
+          // Animate skill bars in newly shown panel
+          setTimeout(() => {
+            target.querySelectorAll(".skill-fill").forEach((bar) => {
+              bar.style.width = bar.dataset.width;
+            });
+          }, 100);
+        });
+      });
+
+      // === Active nav link on scroll ===
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const top = section.offsetTop - 120;
+          if (window.scrollY >= top) current = section.getAttribute("id");
+        });
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current)
+            link.classList.add("active");
+        });
+      });
+
+      // === Contact form with toast ===
+      function showToast(message, type = "success") {
+        const container = document.getElementById("toast-container");
+        const toast = document.createElement("div");
+        const bgColor =
+          type === "success"
+            ? "bg-emerald-500/10 border-emerald-500/30"
+            : "bg-red-500/10 border-red-500/30";
+        const textColor =
+          type === "success" ? "text-emerald-400" : "text-red-400";
+        const icon =
+          type === "success" ? "lucide:check-circle" : "lucide:alert-circle";
+        toast.className = `toast-enter flex items-center gap-3 px-5 py-3 rounded-xl border ${bgColor} backdrop-blur-md shadow-xl`;
+        toast.innerHTML = `
+        <iconify-icon icon="${icon}" width="18" class="${textColor}"></iconify-icon>
+        <span class="text-sm font-medium ${textColor}">${message}</span>
+      `;
+        container.appendChild(toast);
+        setTimeout(() => {
+          toast.classList.remove("toast-enter");
+          toast.classList.add("toast-exit");
+          setTimeout(() => toast.remove(), 400);
+        }, 3000);
+      }
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const btn = e.target.querySelector('button[type="submit"]');
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML =
+            '<iconify-icon icon="lucide:loader-2" width="16" class="animate-spin"></iconify-icon> Sending...';
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+            e.target.reset();
+            showToast("Message sent successfully! I'll get back to you soon.");
+          }, 1500);
+        });
+
+      // === Typing effect for hero ===
+      const roles = [
+        "Full-Stack Developer",
+        "UI/UX Enthusiast",
+        "Open Source Contributor",
+        "Problem Solver",
+      ];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingEl = document.getElementById("typing-role");
+      function typeRole() {
+        if (!typingEl) return;
+        const current = roles[roleIndex];
+        if (!isDeleting) {
+          typingEl.textContent = current.substring(0, charIndex + 1);
+          charIndex++;
+          if (charIndex === current.length) {
+            setTimeout(() => {
+              isDeleting = true;
+              typeRole();
+            }, 2000);
+            return;
+          }
+        } else {
+          typingEl.textContent = current.substring(0, charIndex - 1);
+          charIndex--;
+          if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
+        }
+        setTimeout(typeRole, isDeleting ? 40 : 80);
+      }
+      // Start after initial animation
+      setTimeout(typeRole, 2000);
+    </script>
+
+    <!-- Add typing-role span in hero (override) -->
+    <script>
+      // Enhance hero subtitle with typing
+      const heroSub = document.querySelector("#hero .text-slate-400");
+      if (heroSub) {
+        const originalHTML = heroSub.innerHTML;
+        heroSub.innerHTML = originalHTML.replace(
+          "Full-Stack Developer",
+          '<span id="typing-role" class="text-white font-medium">Full-Stack Developer</span>',
+        );
+      }
+    </script>
+  </body>
+</html>

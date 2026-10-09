@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes animationIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+.anim-in {
+  animation: animationIn 0.8s ease-out both;
+}
+.anim-delay-1 {
+  animation-delay: 0.1s;
+}
+.anim-delay-2 {
+  animation-delay: 0.2s;
+}
+.anim-delay-3 {
+  animation-delay: 0.3s;
+}
+.anim-delay-4 {
+  animation-delay: 0.4s;
+}
+.anim-delay-5 {
+  animation-delay: 0.5s;
+}
+.anim-delay-6 {
+  animation-delay: 0.6s;
+}
+.anim-delay-7 {
+  animation-delay: 0.7s;
+}
+.anim-delay-8 {
+  animation-delay: 0.8s;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(8px);
+  transition: all 0.8s ease-out;
+}
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+/* Glow button */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes border-spin {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+.glow-btn {
+  position: relative;
+  z-index: 1;
+}
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    transparent 0%,
+    #059669 5%,
+    #34d399 15%,
+    #059669 30%,
+    transparent 40%
+  );
+  animation: border-spin 2.5s linear infinite;
+  z-index: -1;
+}
+.glow-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #0a0b0e;
+  z-index: -1;
+}
+
+/* Typing cursor */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: #10b981;
+}
+
+/* Skill bar fill */
+.skill-fill {
+  width: 0;
+  transition: width 1.5s ease-out;
+}
+.skill-fill.filled {
+  /* width set via inline style */
+}
+
+/* Project card hover */
+.project-card {
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.project-card:hover {
+  border-color: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Tab active */
+.tab-btn {
+  transition: all 0.3s ease;
+}
+.tab-btn.active {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+/* Toast */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.toast-enter {
+  animation: slideInRight 0.4s ease-out both;
+}
+.toast-exit {
+  animation: slideOutRight 0.4s ease-in both;
+}
+
+/* Nav active indicator */
+.nav-link {
+  position: relative;
+}
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #10b981;
+  border-radius: 9999px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0b0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1b20;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
